@@ -13,10 +13,10 @@ public class Application {
 
         client.addAccount(account);
 
-        account.executeOperation(Operations.DEPOSIT, 10);
-        account.executeOperation(Operations.DEPOSIT, 5);
-        account.executeOperation(Operations.WITHDRAWAL, 8);
-        account.executeOperation(Operations.WITHDRAWAL, 2);
+        account.executeOperation(new Deposit(10));
+        account.executeOperation(new Deposit(5));
+        account.executeOperation(new Withdrawal(8));
+        account.executeOperation(new Withdrawal(2));
 
         account.printTransactions();
     }

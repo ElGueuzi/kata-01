@@ -14,8 +14,8 @@ public class Account {
         this.transactions = new ArrayList<>();
     }
 
-    public void executeOperation(Operation operation, double amount) {
-        var transaction = operation.execute(amount, balance);
+    public void executeOperation(Operation operation) {
+        var transaction = operation.execute(balance);
         balance = transaction.getBalance();
         transactions.add(transaction);
     }
